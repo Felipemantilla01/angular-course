@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  public myId = 'testId'
-  public isDisabled = 'true'
+
 
   constructor() {}
 
