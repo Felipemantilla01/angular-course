@@ -7,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public display = false
-  public toggle(){
-    this.display= !this.display
-  }
-  
   constructor() {}
 
   ngOnInit() {
