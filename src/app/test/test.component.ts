@@ -7,15 +7,7 @@ import { Component, OnInit, Input , EventEmitter, Output} from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  message="welcome to angular course"
-  name="felipe"
 
-  profile={
-    "firstName":"John",
-    "lastName":"Defoe"
-  }
-
-  public date = new Date();
   constructor() {}
 
   ngOnInit() {
