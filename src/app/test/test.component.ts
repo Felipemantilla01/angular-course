@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  
+  public name = ""
+  public logger(e){
+    console.log(e)
+  }
   constructor() {}
 
   ngOnInit() {
