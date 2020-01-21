@@ -1,0 +1,13 @@
+
+
+<button (click)="color='red'">red</button>
+<button (click)="color='blue'" >blue</button>
+<button (click)="color='yellow'">yellow</button>
+
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'" >you picked {{color}} button</div>
+    <div *ngSwitchCase="'blue'" >you picked {{color}} button</div>
+    <div *ngSwitchCase="'yellow'" >you picked {{color}} button</div>
+    <div *ngSwitchDefault> Pick again</div>
+</div>

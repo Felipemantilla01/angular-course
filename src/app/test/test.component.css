@@ -17,6 +17,7 @@ button{
     background-color: rgb(146, 198, 243);
     color: azure;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .text-success{
