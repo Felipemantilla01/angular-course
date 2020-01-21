@@ -7,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public textClass = "text-success"
   public hasError = true
-  public hasError2 = false
+  public highLightColor='blue'
 
-  public isSpecial = true
-  messageClasses = {
-    "text-success": !this.hasError,
-    "text-danger": this.hasError,
-    "text-special": this.isSpecial
-    }
+  public titleStyles = {
+    color: "gray",
+    fontStyle: "italic"
+  }
+
   constructor() {}
 
   ngOnInit() {
