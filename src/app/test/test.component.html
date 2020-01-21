@@ -1,4 +1,12 @@
  
- <h4 [ngStyle]="hasError:" > event bindig </h4>
+ <h4 [style.color]="hasError? 'red' : 'green'" > [style.color]="hasError? 'red' : 'green'" </h4>
 
- <button (click)="onClick()" > (click)="onClick()" </button>
+ <button (click)="onClick(false)" > (click)="onClick(false) " </button>
+ <button (click)="onClick(true)" > (click)="onClick(true)" </button>
+<br>
+
+<button (click)="capEvent($event)" > (click)="capEvent($event)" </button>
+
+<br>
+
+<button (click)="hasError=true" >(click)="hasError=true"</button>

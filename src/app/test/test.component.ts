@@ -15,9 +15,14 @@ export class TestComponent implements OnInit {
     fontStyle: "italic"
   }
 
-  public onClick(){
-    
+  public onClick(e){    
+    this.hasError=e
   }
+
+  public capEvent(e){
+    console.log(e)
+  }
+
   constructor() {}
 
   ngOnInit() {
