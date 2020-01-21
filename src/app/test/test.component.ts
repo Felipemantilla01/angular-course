@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public name = ""
-  public logger(e){
-    console.log(e)
+  public display = false
+  public toggle(){
+    this.display= !this.display
   }
+  
   constructor() {}
 
   ngOnInit() {
