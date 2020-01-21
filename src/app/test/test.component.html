@@ -1,25 +1,24 @@
-<div>
 
-    <h1> Posibilities of brackets expressions : YOU CAN DO</h1>
-    <h4>expressions:</h4>
-    <p> 2+2= {{2+2}} </p>
-    <h4>concatening string with properties:</h4>
-    <p>  Welcome {{name}}  method 1</p>
-    <p> {{' Welcome ' + name}} method 2</p>
-    <h4> access to a JavaScript methods:</h4>    
-    <p> name.length : {{name.length}} </p>
-    <p> name.toUpperCase() : {{name.toUpperCase()}} </p>
-    <p> helloWorld() : {{helloWorld()}} </p>
 
-    <h1>YOU CAN'T DO</h1>
+<h4> PROPERTY BINDING</h4>
 
-    <p> in brackets : a=2+2 -->> uncomment and see the console </p> 
-    <!--<p>{{a= 2+2}}</p>   -->
-    <p> in brackets : window.location.href -->> uncomment and see the console </p>
-    <!--<p> {{window.location.href}} </p>-->
-    <p><strong>We can do:</strong> create a variable on the class instance and interpolate here : example</p>
-    <p> {{siteUrl}} </p> 
-    <p> where the variable siteUrl = window.location.href</p>
-    
+<input type="text" value="felipe"> 
+<p> 
+    attributes initialize the DOM properties and done, attributes can not change once they are initialized
+    properties values however can change
+</p>
+<p>
+    you can test using $0.getAttribute('value') or $0.value() on the console,
+    then change the text of the input, and test once
+</p>
 
-</div>
+<input type="text" [id]="myId" placeholder="[id]='myId' ">
+<input type="text" id={{myId}} placeholder="id={myId} (double brackets) cause the same but">
+
+<input type="text"  disabled="false" placeholder="disabled='false' dont works">
+<input type="text"  disabled="{{false}}" placeholder="disabled='{false}' dont works ">
+<input type="text" [disabled] ="false" placeholder="[disabled]='false'  works">
+<input type="text" [disabled] ="true" placeholder="[disabled]='true' works">
+<p> next step</p>
+<input type="text" [disabled] = "isDisabled" placeholder="[disabled] = 'isDisabled'">
+<input type="text" bind-disabled = "isDisabled" placeholder="bind-disabled = 'isDisabled'">
