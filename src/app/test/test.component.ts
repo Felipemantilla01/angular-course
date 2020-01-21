@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input , EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public colors = ["red", "green", "blue", "yellow"]
+
+  @Output() public childEvent = new EventEmitter()
+
+  @Input() public parentData 
+  @Input('parentData2') public name
+
   constructor() {}
 
   ngOnInit() {
+  }
+
+  fireEvent(){
+    console.log('child event')
+    this.childEvent.emit('hello from the test component')
   }
 
 }

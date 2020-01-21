@@ -1,4 +1,6 @@
 <h1> Angular</h1>
 
-<app-test></app-test>
+<h2>{{message}}</h2>
+
+<app-test (childEvent)="message=$event" [parentData]="name" [parentData2]="name"></app-test>
 
