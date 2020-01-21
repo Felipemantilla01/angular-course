@@ -1,12 +1,5 @@
- 
- <h4 [style.color]="hasError? 'red' : 'green'" > [style.color]="hasError? 'red' : 'green'" </h4>
+<h2>template-reference-variables</h2>
 
- <button (click)="onClick(false)" > (click)="onClick(false) " </button>
- <button (click)="onClick(true)" > (click)="onClick(true)" </button>
-<br>
+<input type="text" #myInput placeholder="#myInput"> 
 
-<button (click)="capEvent($event)" > (click)="capEvent($event)" </button>
-
-<br>
-
-<button (click)="hasError=true" >(click)="hasError=true"</button>
+<button (click) ="logger(myInput.value)">(click) ="logger(myInput.value)"</button>

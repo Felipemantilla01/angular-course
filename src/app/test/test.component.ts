@@ -7,22 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public hasError = true
-  public highLightColor='blue'
+public logger(value){
+  console.log(value)
+}
 
-  public titleStyles = {
-    color: "gray",
-    fontStyle: "italic"
-  }
-
-  public onClick(e){    
-    this.hasError=e
-  }
-
-  public capEvent(e){
-    console.log(e)
-  }
-
+  
   constructor() {}
 
   ngOnInit() {
