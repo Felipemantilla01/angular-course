@@ -1,5 +1,25 @@
 <div>
-    <input type="text" placeholder="user"><br>
-    <input type="password" placeholder="password"><br>
-    <button> {{loginBtnText}} </button>
+
+    <h1> Posibilities of brackets expressions : YOU CAN DO</h1>
+    <h4>expressions:</h4>
+    <p> 2+2= {{2+2}} </p>
+    <h4>concatening string with properties:</h4>
+    <p>  Welcome {{name}}  method 1</p>
+    <p> {{' Welcome ' + name}} method 2</p>
+    <h4> access to a JavaScript methods:</h4>    
+    <p> name.length : {{name.length}} </p>
+    <p> name.toUpperCase() : {{name.toUpperCase()}} </p>
+    <p> helloWorld() : {{helloWorld()}} </p>
+
+    <h1>YOU CAN'T DO</h1>
+
+    <p> in brackets : a=2+2 -->> uncomment and see the console </p> 
+    <!--<p>{{a= 2+2}}</p>   -->
+    <p> in brackets : window.location.href -->> uncomment and see the console </p>
+    <!--<p> {{window.location.href}} </p>-->
+    <p><strong>We can do:</strong> create a variable on the class instance and interpolate here : example</p>
+    <p> {{siteUrl}} </p> 
+    <p> where the variable siteUrl = window.location.href</p>
+    
+
 </div>
