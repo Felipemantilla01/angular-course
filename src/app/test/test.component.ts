@@ -15,6 +15,9 @@ export class TestComponent implements OnInit {
     fontStyle: "italic"
   }
 
+  public onClick(){
+    
+  }
   constructor() {}
 
   ngOnInit() {
