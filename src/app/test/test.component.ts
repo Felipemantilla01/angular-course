@@ -7,20 +7,18 @@ import { Component, OnInit, Input , EventEmitter, Output} from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  message="welcome to angular course"
+  name="felipe"
 
-  @Output() public childEvent = new EventEmitter()
+  profile={
+    "firstName":"John",
+    "lastName":"Defoe"
+  }
 
-  @Input() public parentData 
-  @Input('parentData2') public name
-
+  public date = new Date();
   constructor() {}
 
   ngOnInit() {
-  }
-
-  fireEvent(){
-    console.log('child event')
-    this.childEvent.emit('hello from the test component')
   }
 
 }
