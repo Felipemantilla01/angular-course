@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { IEmployee } from './employee';
-import { Observable } from 'rxjs';
-import { tick } from '@angular/core/testing';
+import { Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +13,14 @@ export class EmployeeService {
     'Access-Control-Allow-Origin':'allowOrigin'
   });
 
-  private _url:string = 'http://localhost:3200/employees'
+  private _url:string = 'http://localhost:3200/employees2'
   constructor(private http: HttpClient) { }
 
   getEmployees(): Observable<IEmployee[]>{
-    return this.http.get<IEmployee[]>(this._url)
+    return this.http.get<IEmployee[]>(this._url)    
   }
+
+
 
   /*getEmployees(): Observable<IEmployee[]>{
     return this.http.get<IEmployee[]>('http://dummy.restapiexample.com/api/v1/employees')
