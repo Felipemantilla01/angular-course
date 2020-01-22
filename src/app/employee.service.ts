@@ -1,18 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { IEmployee } from './employee';
 import { Observable } from 'rxjs';
-import { tick } from '@angular/core/testing';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-
-  headers: HttpHeaders = new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin':'allowOrigin'
-  });
 
   private _url:string = 'http://localhost:3200/employees'
   constructor(private http: HttpClient) { }
