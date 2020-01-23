@@ -27,7 +27,8 @@ export class EmployeeListComponent implements OnInit {
   }
 
   onSelect(employee){
-    this.router.navigate(['/employees',employee.id])
+    //this.router.navigate(['/employees',employee.id])
+    this.router.navigate([employee.id],{relativeTo:this.route})
   }
 
   isSelected(employee){

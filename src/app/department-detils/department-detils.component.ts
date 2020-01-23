@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router , ParamMap} from '@angular/router'
-import { parse } from 'querystring';
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-department-detils',
@@ -24,18 +23,21 @@ export class DepartmentDetilsComponent implements OnInit {
 
   onNext(){
     let nextId = this.departmentId + 1
-    this.router.navigate(['/departments',nextId])
+    //this.router.navigate(['/departments',nextId])
+    this.router.navigate([nextId],{relativeTo:this.route})
     this.departmentId = nextId
   }
   onPrev(){
     let prevId = this.departmentId - 1
-    this.router.navigate(['/departments',prevId])
+    //this.router.navigate(['/departments',prevId])
+    this.router.navigate([prevId],{relativeTo:this.route})
     this.departmentId = prevId
   }
 
   gotoDepartments(){
     let selectedId = this.departmentId ? this.departmentId : null
-    this.router.navigate(['/departments',{id:selectedId}])
+    //this.router.navigate(['/departments',{id:selectedId}])
+    this.router.navigate(['../',{id:selectedId}], {relativeTo:this.route})
   }
 
 
