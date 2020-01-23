@@ -27,5 +27,9 @@ export class EmployeeDetailsComponent implements OnInit {
     this.router.navigate(['/employees', prevId])
     this.employeeId -= 1
   }
+  gotoEmployees(){
+    let selectedId = this.employeeId ? this.employeeId : null
+    this.router.navigate(['/employees',{id:selectedId}])
+  }
 
 }

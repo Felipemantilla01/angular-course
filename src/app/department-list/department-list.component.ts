@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DepartmentsService } from '../departments.service';
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 //import { setInterval } from 'timers';
 
 @Component({
@@ -10,9 +10,10 @@ import { Router } from '@angular/router'
 })
 export class DepartmentListComponent implements OnInit {
 
-  constructor(private _departmentService: DepartmentsService, private router : Router) { }
+  constructor(private _departmentService: DepartmentsService, private router : Router, private route: ActivatedRoute) { }
 
   public departmentList:any = []
+  public prevSelectDepartment
 
   /*
   private autoSaveInterval: any = setInterval(()=>{
@@ -30,12 +31,19 @@ export class DepartmentListComponent implements OnInit {
   }
  
 
-  ngOnInit( ) {   
+  ngOnInit( ) { 
+
+    let id = parseInt(this.route.snapshot.paramMap.get('id'))
+    this.prevSelectDepartment=id
     this._departmentService.getDepartments()
     .subscribe(data => {
       console.log(data)
       this.departmentList = data
     })
+  }
+
+  isSelected(department){
+    return this.prevSelectDepartment === department.id
   }
 
 }
