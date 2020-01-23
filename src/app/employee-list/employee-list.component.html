@@ -1,9 +1,11 @@
 
 <div>
     <h2>Employee List</h2>
-    <div *ngFor="let employee of employeeList">
-        <li>
-            {{employee.id}} : {{employee.name}} - age: {{employee.age}}
-        </li>
+    <div>
+        <ul class="items">
+            <li *ngFor="let employee of employeeList">
+                <span class="badge">{{employee.id}}</span> {{employee.name}}
+            </li>
+        </ul>
     </div>
 </div>

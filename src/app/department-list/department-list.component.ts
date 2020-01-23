@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DepartmentsService } from '../departments.service';
-import { setInterval } from 'timers';
+import { Router } from '@angular/router'
+//import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-department-list',
@@ -9,7 +10,7 @@ import { setInterval } from 'timers';
 })
 export class DepartmentListComponent implements OnInit {
 
-  constructor(private _departmentService: DepartmentsService) { }
+  constructor(private _departmentService: DepartmentsService, private router : Router) { }
 
   public departmentList:any = []
 
@@ -22,7 +23,13 @@ export class DepartmentListComponent implements OnInit {
     })
   },250);
   */
+
+  
+  onSelect(department){
+    this.router.navigate(['/departments', department.id])
+  }
  
+
   ngOnInit( ) {   
     this._departmentService.getDepartments()
     .subscribe(data => {
