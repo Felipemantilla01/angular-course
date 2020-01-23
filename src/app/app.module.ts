@@ -8,6 +8,7 @@ import { DepartmentsService } from './departments.service';
 import { EmployeeService } from './employee.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetilsComponent } from './department-detils/department-detils.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DepartmentDetilsComponent } from './department-detils/department-detils
     AppComponent,
     routingComponents,
     PageNotFoundComponent,
-    DepartmentDetilsComponent
+    DepartmentDetilsComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
