@@ -1,6 +1,15 @@
 
+<p>
+    <button (click)="showOverview()">Overview</button>
+    <button (click)="showContact()">Contact</button>
+</p>
+
+<router-outlet></router-outlet>
 <br>
-<a (click)="onPrev()"> Previous </a> -- <a (click)="onNext()"> Next </a>
+
+<p>
+    <button (click)="onPrev()"> Previous </button> -- <button (click)="onNext()"> Next </button>
+</p>
 
 <div>
     <button (click)="gotoDepartments()" >Back</button>

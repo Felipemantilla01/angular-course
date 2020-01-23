@@ -38,5 +38,13 @@ export class DepartmentDetilsComponent implements OnInit {
     this.router.navigate(['/departments',{id:selectedId}])
   }
 
+  showOverview(){
+    this.router.navigate(['overview'], {relativeTo:this.route})
+  }
+
+  showContact(){
+    this.router.navigate(['contact'], {relativeTo:this.route})
+  }
+
 
 }

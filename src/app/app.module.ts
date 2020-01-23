@@ -9,6 +9,10 @@ import { EmployeeService } from './employee.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetilsComponent } from './department-detils/department-detils.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
+import { EmployeeOverviewComponent } from './employee-overview/employee-overview.component';
+import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     routingComponents,
     PageNotFoundComponent,
     DepartmentDetilsComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent,
+    EmployeeOverviewComponent,
+    EmployeeContactComponent
   ],
   imports: [
     BrowserModule,
